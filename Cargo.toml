@@ -1,0 +1,22 @@
+[package]
+name = "semi_ft"
+version = "0.1.0"
+authors = [ "muniryasir <muniryasir2009@gmail.com>" ]
+edition = "2021"
+license = "MPL-2.0"
+description = "1"
+
+[features]
+default = ["std", "bump_alloc"]
+std = ["concordium-std/std", "concordium-cis2/std"]
+bump_alloc = ["concordium-std/bump_alloc"]
+
+[dependencies]
+concordium-std = {path = "/home/yasir/concordium_dev/contracts/semi-FT/concordium-rust-smart-contracts/concordium-std", default-features = false}
+concordium-cis2 = {path = "/home/yasir/concordium_dev/contracts/semi-FT/concordium-rust-smart-contracts/concordium-cis2", default-features = false}
+hex = "0.4.3"
+
+[dev-dependencies]
+concordium-smart-contract-testing = {path = "/home/yasir/concordium_dev/contracts/semi-FT/concordium-rust-smart-contracts/contract-testing"}
+concordium-std-derive = { path = "/home/yasir/concordium_dev/contracts/semi-FT/concordium-rust-smart-contracts/concordium-std-derive" }
+rand = "0.8"
